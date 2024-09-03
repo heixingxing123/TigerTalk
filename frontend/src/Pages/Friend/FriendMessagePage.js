@@ -84,6 +84,7 @@ const FriendMessagePage = () => {
         };
     }, []);
 
+
     useEffect(() => {
         if (stompClient && selectedFriend && stompClient.connected) {
             const subscription = stompClient.subscribe("/topic/messages", (message) => {
